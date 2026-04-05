@@ -413,11 +413,29 @@ export default function Register() {
 
               <div className="reg-field">
                 <label className="reg-label">Documents (PDF)</label>
+                
+                {/* Registre de Commerce */}
                 <div className="reg-dropzone" onClick={() => document.getElementById('rc').click()}>
                   <UploadCloud size={20} color="var(--muted)" style={{marginBottom: 8}}/>
                   <div className="reg-dropzone-text">Charger le Registre de Commerce</div>
-                  <input type="file" id="rc" name="registre_commerce" hidden accept=".pdf" onChange={handleRecruteur} />
-                  {formRecruteur.registre_commerce && <div style={{fontSize:10, color:'var(--lime)', marginTop:4}}>{formRecruteur.registre_commerce.name}</div>}
+                  <input type="file" id="rc" name="registre_commerce" hidden accept=".pdf" onChange={handleRecruteur} required />
+                  {formRecruteur.registre_commerce && <div style={{fontSize:10, color:'var(--lime)', marginTop:4}}>✓ {formRecruteur.registre_commerce.name}</div>}
+                </div>
+
+                {/* Certificat d'Immatriculation */}
+                <div className="reg-dropzone" onClick={() => document.getElementById('ci').click()} style={{marginTop: 12}}>
+                  <UploadCloud size={20} color="var(--muted)" style={{marginBottom: 8}}/>
+                  <div className="reg-dropzone-text">Charger le Certificat d'Immatriculation</div>
+                  <input type="file" id="ci" name="certificat_immatriculation" hidden accept=".pdf" onChange={handleRecruteur} required />
+                  {formRecruteur.certificat_immatriculation && <div style={{fontSize:10, color:'var(--lime)', marginTop:4}}>✓ {formRecruteur.certificat_immatriculation.name}</div>}
+                </div>
+
+                {/* Patente */}
+                <div className="reg-dropzone" onClick={() => document.getElementById('pt').click()} style={{marginTop: 12}}>
+                  <UploadCloud size={20} color="var(--muted)" style={{marginBottom: 8}}/>
+                  <div className="reg-dropzone-text">Charger la Patente</div>
+                  <input type="file" id="pt" name="patente" hidden accept=".pdf" onChange={handleRecruteur} required />
+                  {formRecruteur.patente && <div style={{fontSize:10, color:'var(--lime)', marginTop:4}}>✓ {formRecruteur.patente.name}</div>}
                 </div>
               </div>
 
