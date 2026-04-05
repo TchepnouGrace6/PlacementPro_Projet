@@ -6,7 +6,129 @@
   gap: 20px;
   align-items: start;
 }
-@media (max-width: 860px) { .pp-detail-grid { grid-template-columns: 1fr; } }
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* RESPONSIVE DESIGN */
+/* ═════════════════════════════════════════════════════════════════ */
+
+/* MOBILE (< 640px) */
+@media (max-width: 640px) {
+  .pp-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pp-profile-hero {
+    padding: 20px 16px 16px;
+    gap: 12px;
+  }
+
+  .pp-profile-big-av {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .pp-profile-name {
+    font-size: 18px;
+  }
+
+  .pp-profile-body {
+    padding: 14px 16px;
+  }
+
+  .pp-info-row {
+    padding: 8px 0;
+    font-size: 12px;
+  }
+
+  .pp-info-label {
+    min-width: 75px;
+    font-size: 10px;
+  }
+
+  .pp-doc-link {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .pp-cand-panel-head {
+    padding: 18px 16px;
+  }
+
+  .pp-cand-panel-body {
+    padding: 14px 16px;
+  }
+
+  .pp-block-title {
+    font-size: 14px;
+  }
+
+  .pp-block-text {
+    font-size: 12px;
+  }
+
+  .pp-detail-actions {
+    padding-top: 12px;
+    margin-top: 12px;
+    gap: 8px;
+  }
+}
+
+/* SMALL DEVICES (640px - 768px) */
+@media (min-width: 640px) and (max-width: 768px) {
+  .pp-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pp-profile-hero {
+    padding: 22px 18px 18px;
+  }
+
+  .pp-profile-body {
+    padding: 16px 18px;
+  }
+
+  .pp-cand-panel-head {
+    padding: 20px 18px;
+  }
+
+  .pp-cand-panel-body {
+    padding: 16px 18px;
+  }
+}
+
+/* TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .pp-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pp-profile-hero {
+    padding: 24px 20px 20px;
+  }
+
+  .pp-profile-body {
+    padding: 18px 20px;
+  }
+
+  .pp-cand-panel-head {
+    padding: 22px 20px;
+  }
+
+  .pp-cand-panel-body {
+    padding: 18px 20px;
+  }
+}
+
+/* DESKTOP (> 1024px) */
+@media (min-width: 1024px) {
+  .pp-detail-grid {
+    grid-template-columns: 1fr 1.4fr;
+  }
+}
 
 .pp-profile-card {
   background: var(--white);

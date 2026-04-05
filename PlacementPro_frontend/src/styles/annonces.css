@@ -117,3 +117,99 @@
 .pp-annonce-card:hover .pp-btn-danger {
   opacity: 1;
 }
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* RESPONSIVE DESIGN */
+/* ═════════════════════════════════════════════════════════════════ */
+
+/* MOBILE (< 640px) */
+@media (max-width: 640px) {
+  .pp-annonces-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pp-annonce-card-top {
+    padding: 16px 16px 12px;
+    gap: 8px;
+  }
+
+  .pp-annonce-card-top h3 {
+    font-size: 15px;
+  }
+
+  .pp-annonce-card-body {
+    padding: 12px 16px;
+    gap: 6px;
+  }
+
+  .pp-annonce-meta {
+    font-size: 12px;
+  }
+
+  .pp-annonce-card-actions {
+    padding: 12px 16px;
+    gap: 6px;
+  }
+
+  .pp-annonce-card .pp-btn-danger {
+    opacity: 1; /* Always show buttons on mobile */
+  }
+}
+
+/* SMALL DEVICES (640px - 768px) */
+@media (min-width: 640px) and (max-width: 768px) {
+  .pp-annonces-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+
+  .pp-annonce-card-top {
+    padding: 18px 18px 14px;
+  }
+
+  .pp-annonce-card-top h3 {
+    font-size: 16px;
+  }
+
+  .pp-annonce-card-body {
+    padding: 14px 18px;
+    gap: 7px;
+  }
+
+  .pp-annonce-card-actions {
+    padding: 12px 18px;
+  }
+}
+
+/* TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .pp-annonces-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+  }
+
+  .pp-annonce-card-top {
+    padding: 20px 20px 15px;
+  }
+
+  .pp-annonce-card-body {
+    padding: 15px 20px;
+  }
+
+  .pp-annonce-card-actions {
+    padding: 13px 20px;
+  }
+}
+
+/* DESKTOP (> 1024px) - Default */
+@media (min-width: 1024px) {
+  .pp-annonces-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+
+  .pp-annonce-card-top h3 {
+    font-size: 17px;
+  }
+}

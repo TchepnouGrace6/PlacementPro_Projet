@@ -150,19 +150,147 @@
 .rb-mid     { grid-column: span 6; }
 .rb-third   { grid-column: span 3; }
 
-@media (max-width: 1100px) {
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* RESPONSIVE GRID ADJUSTMENTS */
+/* ─────────────────────────────────────────────────────────────────────────── */
+
+/* MOBILE (< 640px) */
+@media (max-width: 640px) {
+  .rb-inner {
+    padding: 0 16px 48px;
+  }
+
+  .rb-topbar {
+    padding: 16px 0 0;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .rb-topbar-right {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .rb-nav-btn, .rb-cta-btn {
+    font-size: 11px;
+    padding: 6px 12px;
+    min-height: 36px;
+  }
+
+  .rb-bento {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .rb-hero,
+  .rb-stat,
+  .rb-wide,
+  .rb-narrow,
+  .rb-mid,
+  .rb-third {
+    grid-column: span 1;
+  }
+
+  .rb-hero-card {
+    min-height: 220px;
+  }
+
+  .rb-hero-title {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .rb-hero-tag {
+    font-size: 9px;
+    padding: 3px 10px;
+  }
+}
+
+/* SMALL DEVICES (640px - 768px) */
+@media (min-width: 640px) and (max-width: 768px) {
+  .rb-inner {
+    padding: 0 24px 56px;
+  }
+
+  .rb-topbar {
+    padding: 20px 0 0;
+    margin-bottom: 24px;
+  }
+
+  .rb-bento {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .rb-hero   { grid-column: span 2; }
+  .rb-stat   { grid-column: span 1; }
+  .rb-wide   { grid-column: span 2; }
+  .rb-narrow { grid-column: span 1; }
+  .rb-mid    { grid-column: span 2; }
+  .rb-third  { grid-column: span 1; }
+
+  .rb-hero-card {
+    min-height: 240px;
+  }
+}
+
+/* TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rb-inner {
+    padding: 0 28px 64px;
+  }
+
+  .rb-topbar {
+    padding: 24px 0 0;
+    margin-bottom: 28px;
+  }
+
+  .rb-bento {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+
   .rb-hero   { grid-column: span 6; }
-  .rb-stat   { grid-column: span 3; }
+  .rb-stat   { grid-column: span 2; }
+  .rb-wide   { grid-column: span 6; }
+  .rb-narrow { grid-column: span 3; }
+  .rb-mid    { grid-column: span 6; }
+  .rb-third  { grid-column: span 3; }
+}
+
+/* LARGE DESKTOP (1024px - 1280px) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .rb-bento {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+  }
+
+  .rb-hero   { grid-column: span 8; }
+  .rb-stat   { grid-column: span 2; }
   .rb-wide   { grid-column: span 12; }
   .rb-narrow { grid-column: span 6; }
   .rb-mid    { grid-column: span 6; }
   .rb-third  { grid-column: span 4; }
 }
-@media (max-width: 720px) {
-  .rb-bento  { grid-template-columns: 1fr 1fr; }
-  .rb-hero   { grid-column: span 2; grid-row: span 1; }
-  .rb-stat   { grid-column: span 1; }
-  .rb-wide, .rb-narrow, .rb-mid, .rb-third { grid-column: span 2; }
+
+/* EXTRA LARGE DESKTOP (> 1280px) */
+@media (min-width: 1280px) {
+  .rb-inner {
+    padding: 0 36px 72px;
+  }
+
+  .rb-bento {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+  .rb-hero   { grid-column: span 8; }
+  .rb-stat   { grid-column: span 2; }
+  .rb-wide   { grid-column: span 12; }
+  .rb-narrow { grid-column: span 6; }
+  .rb-mid    { grid-column: span 6; }
+  .rb-third  { grid-column: span 3; }
 }
 
 /* ── HERO CARD ───────────────────────────────────────────────────── */

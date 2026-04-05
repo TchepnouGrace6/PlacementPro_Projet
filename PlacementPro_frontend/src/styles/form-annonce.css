@@ -6,7 +6,30 @@
   gap: 20px;
   align-items: start;
 }
-@media (max-width: 900px) { .pp-form-layout { grid-template-columns: 1fr; } }
+
+/* Mobile layout - single column */
+@media (max-width: 640px) {
+  .pp-form-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* Tablet layout - single column */
+@media (min-width: 640px) and (max-width: 768px) {
+  .pp-form-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* Desktop layout - two columns */
+@media (min-width: 768px) {
+  .pp-form-layout {
+    grid-template-columns: 1fr 320px;
+    gap: 20px;
+  }
+}
 
 /* SECTION CARD */
 .pp-form-section {
@@ -152,3 +175,112 @@
   line-height: 1.5;
 }
 .pp-sidebar-tip strong { color: var(--text-2); font-weight: 600; }
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* RESPONSIVE ADJUSTMENTS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+/* MOBILE (< 640px) */
+@media (max-width: 640px) {
+  .pp-form-section {
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .pp-form-section-head {
+    padding: 14px 16px 10px;
+    gap: 8px;
+  }
+
+  .pp-form-section-num {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+
+  .pp-form-section-title {
+    font-size: 14px;
+  }
+
+  .pp-form-body {
+    padding: 14px 16px;
+  }
+
+  .pp-field {
+    margin-bottom: 14px;
+  }
+
+  .pp-label {
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    margin-bottom: 6px;
+  }
+
+  .pp-input, .pp-textarea, .pp-select-field {
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .pp-textarea {
+    min-height: 80px;
+  }
+
+  .pp-form-row {
+    gap: 10px;
+  }
+
+  .pp-sidebar-card {
+    position: static;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .pp-sidebar-card h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .pp-sidebar-actions {
+    gap: 8px;
+  }
+
+  .pp-sidebar-tip {
+    font-size: 11px;
+  }
+}
+
+/* SMALL DEVICES (640px - 768px) */
+@media (min-width: 640px) and (max-width: 768px) {
+  .pp-form-section {
+    margin-bottom: 14px;
+  }
+
+  .pp-form-section-head {
+    padding: 16px 20px 12px;
+  }
+
+  .pp-form-body {
+    padding: 16px 20px;
+  }
+
+  .pp-input, .pp-textarea, .pp-select-field {
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+
+  .pp-sidebar-card {
+    position: static;
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+}
+
+/* TABLET & DESKTOP (> 768px) - Default styling */
+@media (min-width: 768px) {
+  .pp-sidebar-card {
+    position: sticky;
+    top: 24px;
+  }
+}
